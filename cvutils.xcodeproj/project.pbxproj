@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		880C71671C3AAB2B0075D63F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 880C71661C3AAB2B0075D63F /* main.cpp */; };
+		880C71731C3AACC50075D63F /* contours.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 880C716D1C3AACC50075D63F /* contours.cpp */; };
+		880C71741C3AACC50075D63F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 880C716F1C3AACC50075D63F /* main.cpp */; };
+		880C71751C3AACC50075D63F /* marks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 880C71711C3AACC50075D63F /* marks.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,12 @@
 
 /* Begin PBXFileReference section */
 		880C71631C3AAB2B0075D63F /* cvutils */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cvutils; sourceTree = BUILT_PRODUCTS_DIR; };
-		880C71661C3AAB2B0075D63F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		880C716D1C3AACC50075D63F /* contours.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = contours.cpp; sourceTree = "<group>"; };
+		880C716E1C3AACC50075D63F /* contours.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = contours.hpp; sourceTree = "<group>"; };
+		880C716F1C3AACC50075D63F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		880C71701C3AACC50075D63F /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		880C71711C3AACC50075D63F /* marks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = marks.cpp; sourceTree = "<group>"; };
+		880C71721C3AACC50075D63F /* marks.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = marks.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,12 @@
 		880C71651C3AAB2B0075D63F /* cvutils */ = {
 			isa = PBXGroup;
 			children = (
-				880C71661C3AAB2B0075D63F /* main.cpp */,
+				880C716D1C3AACC50075D63F /* contours.cpp */,
+				880C716E1C3AACC50075D63F /* contours.hpp */,
+				880C716F1C3AACC50075D63F /* main.cpp */,
+				880C71701C3AACC50075D63F /* main.hpp */,
+				880C71711C3AACC50075D63F /* marks.cpp */,
+				880C71721C3AACC50075D63F /* marks.hpp */,
 			);
 			path = cvutils;
 			sourceTree = "<group>";
@@ -118,7 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				880C71671C3AAB2B0075D63F /* main.cpp in Sources */,
+				880C71751C3AACC50075D63F /* marks.cpp in Sources */,
+				880C71741C3AACC50075D63F /* main.cpp in Sources */,
+				880C71731C3AACC50075D63F /* contours.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +219,31 @@
 		880C716B1C3AAB2B0075D63F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +251,31 @@
 		880C716C1C3AAB2B0075D63F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
