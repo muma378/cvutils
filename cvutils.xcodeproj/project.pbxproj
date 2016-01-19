@@ -32,6 +32,7 @@
 		880C71701C3AACC50075D63F /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
 		880C71711C3AACC50075D63F /* marks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = marks.cpp; sourceTree = "<group>"; };
 		880C71721C3AACC50075D63F /* marks.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = marks.hpp; sourceTree = "<group>"; };
+		880DAC8D1C3AB9CA00CC2397 /* batch_imgproc.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = batch_imgproc.sh; path = build/Debug/batch_imgproc.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +51,7 @@
 			children = (
 				880C71651C3AAB2B0075D63F /* cvutils */,
 				880C71641C3AAB2B0075D63F /* Products */,
+				880DAC8D1C3AB9CA00CC2397 /* batch_imgproc.sh */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,6 +301,7 @@
 				880C716C1C3AAB2B0075D63F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

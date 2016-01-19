@@ -43,8 +43,9 @@ vector<Point> &reconstruct(vector<string> &elems, vector<Point> &points, int gap
 void drawCross(Mat& img, Point p, const Scalar& color, int radius=5, int thickness=3){
     int x = p.x;
     int y = p.y;
-    line(img, Point(x-radius, y), Point(x+radius, y), color, thickness);
-    line(img, Point(x, y+radius), Point(x, y-radius), color, thickness);
+    circle(img, p, 2, color, -1);   // draw a dot
+//    line(img, Point(x-radius, y), Point(x+radius, y), color, thickness);
+//    line(img, Point(x, y+radius), Point(x, y-radius), color, thickness);
 
 }
 

@@ -25,6 +25,7 @@ int main(int argc, char** argv){
     "{@img2         |<none> |the dst image      }"
     "{dst d         |       |the folder to save }"
     "{text t        |       |text file to refer }"
+    "{shape s       |cross  |the shape used to mark }"
     ;
     
     CommandLineParser parser(argc, argv, keys);
@@ -39,12 +40,13 @@ int main(int argc, char** argv){
     
     string dst  = parser.get<string>("dst");
     string txt  = parser.get<string>("text");
+    string shape = parser.get<string>("shape");
     
 //    util = "marks";
 //    img1 = "street-image/ScreenShot/DaTang_Entrance_Windy-00001.bmp";
 //    img2 = "street-image/Body/DaTang_Entrance_Windy-00001.bmp";
 //    txt = "street-image/Position/DaTang_Entrance_Windy-00001.bmp.txt";
-    
+//     dst = "street-image/Marks/"
     
     map<string, int> utils_map = {
         { "contours", 1 },
@@ -60,6 +62,7 @@ int main(int argc, char** argv){
                 break;
             case 2:
                 dst_file = dst + basename(img1);
+//                marks(img1.c_str(), txt.c_str(), dst_file.c_str(), shape.c_str());
                 marks(img1.c_str(), txt.c_str(), dst_file.c_str());
                 break;
             default:
@@ -68,7 +71,10 @@ int main(int argc, char** argv){
         }
     } catch (const out_of_range& oor) {
         parser.printMessage();
+        // try a sample
+        contours("street-image-sample/ScreenShot/DaTang_Entrance_Windy-00001.bmp", "street-image-sample/Body/DaTang_Entrance_Windy-00001.bmp", "sample.bmp");
     }
+    
 //    contours("street-image-sample/ScreenShot/DaTang_Entrance_Windy-00001.bmp", "street-image-sample/Body/DaTang_Entrance_Windy-00001.bmp");
 //    marks("street-image-sample/ScreenShot/DaTang_Entrance_Windy-00001.bmp", "street-image-sample/Position/DaTang_Entrance_Windy-00001.bmp.txt");
 }
